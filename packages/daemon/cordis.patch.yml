@@ -1,0 +1,4 @@
+# dsh-super-fat-fish-daemon bundle layer.
+- insert:
+    - id: super-fat-fish-daemon
+      name: dsh-super-fat-fish-daemon

@@ -9,11 +9,12 @@
     "packages/*"
   ],
   "engines": {
-    "node": ">=22"
+    "node": "^24.22.3 || >=26.13.1"
   },
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "node scripts/smoke.mjs",
     "clean": "npm run clean --workspaces --if-present"
   },
   "devDependencies": {

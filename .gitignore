@@ -1,7 +1,10 @@
 node_modules/
 dist/
+lib/
 *.tsbuildinfo
 coverage/
+docs/dsh-docs/
+*.tgz
 *.log
 .env
 .DS_Store

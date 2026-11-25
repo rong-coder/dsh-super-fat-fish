@@ -1,23 +1,56 @@
 {
   "name": "dsh-super-fat-fish-adapter",
   "version": "0.1.0",
-  "private": true,
-  "description": "Adapter layer for dsh-super-fat-fish.",
+  "description": "Execution adapter plugin for the dsh-super-fat-fish remote execution stack.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rong-coder/dsh-super-fat-fish.git",
+    "directory": "packages/adapter"
+  },
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json",
+    "./src/*": "./src/*"
   },
   "files": [
-    "dist"
+    "lib/index.js",
+    "lib/index.js.map",
+    "lib/index.d.ts",
+    "lib/index.d.ts.map",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "src"
   ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": "^24.22.3 || >=26.13.1",
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0 || ~4.2.0-alpha.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0 || ~4.2.0-alpha.1",
+    "typescript": "^7.0.2"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\""
+    "clean": "node -e \"require('node:fs').rmSync('lib', { recursive: true, force: true })\"",
+    "prepare": "npm run build"
   }
 }

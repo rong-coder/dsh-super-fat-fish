@@ -1,0 +1,4 @@
+# dsh-super-fat-fish-adapter bundle layer.
+- insert:
+    - id: super-fat-fish-adapter
+      name: dsh-super-fat-fish-adapter

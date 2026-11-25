@@ -1,0 +1,4 @@
+# dsh-super-fat-fish-frontend bundle layer.
+- insert:
+    - id: super-fat-fish-frontend
+      name: dsh-super-fat-fish-frontend

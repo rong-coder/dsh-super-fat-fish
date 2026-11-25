@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-super-fat-fish adapter",
+    "description": "dsh-super-fat-fish 远端执行栈的执行适配插件。"
+  }
+}

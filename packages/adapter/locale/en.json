@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-super-fat-fish adapter",
+    "description": "Execution adapter plugin for the dsh-super-fat-fish remote execution stack."
+  }
+}
